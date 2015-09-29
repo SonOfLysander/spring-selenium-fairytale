@@ -46,7 +46,7 @@ public class ForestSection {
     if (storyLines.add(text)) {
       logger.info(text);
 //      voice.speak(text);
-    }
+    } 
   }
 
 }

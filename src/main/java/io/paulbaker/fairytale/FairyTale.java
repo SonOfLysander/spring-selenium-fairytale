@@ -28,6 +28,9 @@ public class FairyTale {
   @Autowired
   private ShopSection shopSection;
 
+  @Autowired
+  private ForestSection forestSection;
+
   @PostConstruct
   public void postConstruct() {
     webDriver.get(gameHost);
@@ -40,6 +43,9 @@ public class FairyTale {
     }
     if (handsSection.getCoinCount() > shopSection.getCheapestCost()) {
       shopSection.buyCheapestItem();
+    }
+    if (forestSection.isVisible()) {
+      forestSection.walkDeeper();
     }
   }
 
